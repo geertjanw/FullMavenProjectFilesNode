@@ -2,9 +2,18 @@
 
 Replacement for Project Files node in Maven logical view in NetBeans.
 
-Before:
+Given a Files window with this content:
+
+![before-files-window.png](pics/before-files-window.png)
+
+...before, the Projects window would look like this:
 
 ![before-projects-window.png](pics/before-projects-window.png)
 
-![before-files-window.png](pics/before-files-window.png)
+...while after installing the plugin, you'll have all source files in the root node available in the Project Files window:
+
+
+
+The benefit is that now you have everything available in the Projects window and you don't need to switch to the Files window.
+
 
