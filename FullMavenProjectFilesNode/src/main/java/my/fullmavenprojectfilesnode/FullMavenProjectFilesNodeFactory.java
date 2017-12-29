@@ -4,7 +4,9 @@ import org.netbeans.api.project.Project;
 import org.netbeans.spi.project.ui.support.NodeFactory;
 import org.netbeans.spi.project.ui.support.NodeFactorySupport;
 import org.netbeans.spi.project.ui.support.NodeList;
+import org.openide.loaders.DataObject;
 import org.openide.loaders.DataObjectNotFoundException;
+import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 
 /**
@@ -17,7 +19,8 @@ public class FullMavenProjectFilesNodeFactory implements NodeFactory {
     @Override
     public NodeList<?> createNodes(Project prjct) {
         try {
-            return NodeFactorySupport.fixedNodeList(new FullMavenProjectFilesNode(prjct));
+            Node node = DataObject.find(prjct.getProjectDirectory()).getNodeDelegate();
+            return NodeFactorySupport.fixedNodeList(new FullMavenProjectFilesNode(node));
         } catch (DataObjectNotFoundException ex) {
             Exceptions.printStackTrace(ex);
         }

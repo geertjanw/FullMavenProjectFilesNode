@@ -1,7 +1,5 @@
 package my.fullmavenprojectfilesnode;
 
-import org.netbeans.api.project.Project;
-import org.openide.loaders.DataObject;
 import org.openide.loaders.DataObjectNotFoundException;
 import org.openide.nodes.FilterNode;
 import org.openide.nodes.Node;
@@ -12,9 +10,8 @@ import org.openide.nodes.Node;
  */
 public class FullMavenProjectFilesNode extends FilterNode {
     
-    public FullMavenProjectFilesNode(Project proj) throws DataObjectNotFoundException {
-        super(DataObject.find(proj.getProjectDirectory()).getNodeDelegate(), 
-                new FullMavenProjectFilesChildren(DataObject.find(proj.getProjectDirectory()).getNodeDelegate()));
+    public FullMavenProjectFilesNode(Node original) throws DataObjectNotFoundException {
+        super(original, new FullMavenProjectFilesChildren(original));
     }
     
     @Override
