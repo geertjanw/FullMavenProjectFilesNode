@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Layer: my/fullmavenprojectfilesnode/layer.xml
 OpenIDE-Module-Localizing-Bundle: my/fullmavenprojectfilesnode/Bundle.properties
 
