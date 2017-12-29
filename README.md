@@ -10,7 +10,7 @@ Given a Files window with this content:
 
 ![before-projects-window.png](pics/before-projects-window.png)
 
-...while after installing the plugin, you'll have all source files in the root node available in the Project Files window:
+...while after installing the plugin, you'll have all source files in the root node available in the Projects window:
 
 ![before-projects-window.png](pics/after-projects-window.png)
 
